@@ -1,0 +1,31 @@
+{
+  "name": "ts-algorithms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/ts-algorithms.js",
+  "module": "./dist/ts-algorithms.mjs",
+  "types": "./dist/ts-algorithms.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@types/node": "22.13.5",
+    "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.2",
+    "typescript": "5.7.2",
+    "vite": "6.1.0",
+    "vite-plugin-dts": "4.5.0",
+    "vitest": "3.0.6"
+  }
+}
