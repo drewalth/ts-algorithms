@@ -1,14 +1,14 @@
 /**
  * Returns an array of chunks from the source array, where each chunk contains elements
  * that belong together based on the given predicate function.
- * 
+ *
  * @param source The source array to chunk
  * @param belongInSameGroup A function that takes two adjacent elements and returns true if they belong in the same group
  * @returns An array of chunks where each chunk is an array of elements
  */
 export function chunkedBy<T>(
   source: T[],
-  belongInSameGroup: (a: T, b: T) => boolean
+  belongInSameGroup: (a: T, b: T) => boolean,
 ): T[][] {
   if (source.length === 0) return [];
 
@@ -37,14 +37,14 @@ export function chunkedBy<T>(
 /**
  * Returns an array of tuples, where each tuple contains a key and a chunk of elements
  * that share that key based on the projection function.
- * 
+ *
  * @param source The source array to chunk
  * @param projection A function that takes an element and returns a key to group by
  * @returns An array of tuples containing the key and chunk of elements
  */
 export function chunkedOn<T, K>(
   source: T[],
-  projection: (element: T) => K
+  projection: (element: T) => K,
 ): [K, T[]][] {
   if (source.length === 0) return [];
 
@@ -75,7 +75,7 @@ export function chunkedOn<T, K>(
 /**
  * Returns an array of chunks from the source array, where each chunk has the specified count
  * of elements (except possibly the last chunk which may be smaller).
- * 
+ *
  * @param source The source array to chunk
  * @param count The size of each chunk
  * @returns An array of chunks where each chunk is an array of elements
@@ -95,7 +95,7 @@ export function chunked<T>(source: T[], count: number): T[][] {
 /**
  * Returns an array of chunks from the source array, where the array is divided into
  * the specified number of chunks as evenly as possible.
- * 
+ *
  * @param source The source array to chunk
  * @param numberOfChunks The number of chunks to create
  * @returns An array of chunks where each chunk is an array of elements

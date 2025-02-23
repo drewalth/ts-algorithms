@@ -1,14 +1,14 @@
 /**
  * Returns both the minimum and maximum elements in the sequence, using the
  * given predicate as the comparison between elements.
- * 
+ *
  * @param source The source array to find min and max in
  * @param areInIncreasingOrder A predicate that returns true if its first argument should be ordered before its second argument
  * @returns A tuple containing the minimum and maximum elements, or null if the sequence is empty
  */
 export function minMax<T>(
   source: T[],
-  areInIncreasingOrder: (a: T, b: T) => boolean
+  areInIncreasingOrder: (a: T, b: T) => boolean,
 ): { min: T; max: T } | null {
   // Check for empty array
   if (source.length === 0) {
@@ -65,11 +65,13 @@ export function minMax<T>(
 
 /**
  * Returns both the minimum and maximum elements in the sequence.
- * 
+ *
  * @param source The source array to find min and max in
  * @returns A tuple containing the minimum and maximum elements, or null if the sequence is empty
  */
-export function minMaxComparable<T extends Comparable>(source: T[]): { min: T; max: T } | null {
+export function minMaxComparable<T extends Comparable>(
+  source: T[],
+): { min: T; max: T } | null {
   return minMax(source, (a, b) => a < b);
 }
 
