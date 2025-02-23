@@ -1,0 +1,30 @@
+name: Pull Request
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read # for checkout
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+      - name: Install dependencies
+        run: npm clean-install
+      - name: Run tests
+        run: npx vitest run
+      - name: Format check
+        run: npm run format:check
+      - name: build
+        run: npm run build

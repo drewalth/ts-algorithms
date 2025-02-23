@@ -20,6 +20,8 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "release": "semantic-release",
     "prepare": "husky"
   },
   "devDependencies": {

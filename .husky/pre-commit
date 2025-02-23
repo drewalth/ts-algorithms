@@ -1,1 +1,2 @@
 npx vitest run
+npm run format:check
