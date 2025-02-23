@@ -10,7 +10,7 @@
   "types": "./dist/ts-algorithms.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/drewalth/ts-algorithms.git"
+    "url": "git+https://github.com/drewalth/ts-algorithms.git"
   },
   "files": [
     "dist"
