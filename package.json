@@ -1,8 +1,10 @@
 {
   "name": "ts-algorithms",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
+  "author": "Drew Althage <16584198+drewalth@users.noreply.github.com>",
   "type": "module",
+  "license": "MIT",
   "main": "./dist/ts-algorithms.js",
   "module": "./dist/ts-algorithms.mjs",
   "types": "./dist/ts-algorithms.d.ts",
